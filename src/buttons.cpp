@@ -28,9 +28,7 @@ void loopButtons()
 
             if (buttonResetState == LOW)
             {
-                digitalWrite(PIN_BUZZER, HIGH);
-                delay(100);
-                digitalWrite(PIN_BUZZER, LOW);
+                beep(1);
                 handleButtonReset();
             }
         }
@@ -52,9 +50,7 @@ void loopButtons()
 
             if (buttonOnOffState == LOW)
             {
-                digitalWrite(PIN_BUZZER, HIGH);
-                delay(100);
-                digitalWrite(PIN_BUZZER, LOW);
+                beep(1);
                 handleButtonOnOff();
             }
         }

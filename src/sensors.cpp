@@ -14,10 +14,13 @@ void refreshHumidityCallback();
 // Every minute
 Task refreshHumidity(TASK_MINUTE, TASK_FOREVER, &refreshHumidityCallback);
 
+float humidity = 0;
+float temperature = 0;
+
 void refreshHumidityCallback()
 {
-    float humidity = sensorSi7021.readHumidity();
-    float temperature = sensorSi7021.readTemperature();
+    humidity = sensorSi7021.readHumidity();
+    temperature = sensorSi7021.readTemperature();
 
     mqttClient.publish(topic_humidity, String(humidity));
     mqttClient.publish(topic_temperature, String(temperature));

@@ -17,3 +17,18 @@ void setupPins()
 
     pinMode(21, OUTPUT); // HACK fix for OLED brightness issue
 }
+
+void beep(int times)
+{
+    for (int i = 0; i < times; i++)
+    {
+        digitalWrite(PIN_BUZZER, HIGH);
+        delay(100);
+        digitalWrite(PIN_BUZZER, LOW);
+
+        if (i < times - 1)
+        {
+            delay(100);
+        }
+    }
+}

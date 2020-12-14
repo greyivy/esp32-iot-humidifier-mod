@@ -12,3 +12,5 @@
 #define PIN_SCL 22
 
 void setupPins();
+
+void beep(int times);

@@ -6,7 +6,7 @@ void toggleTankMode();
 String getTankMode();
 
 unsigned long getTankAverage();
-void addToTankAverage(unsigned long tankTotal);
+void addToTankAverage(unsigned long tankTotalMillis);
 void clearAverage();
 
 bool isTankEmpty();

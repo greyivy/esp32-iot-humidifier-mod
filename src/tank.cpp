@@ -7,9 +7,9 @@ Preferences preferences;
 
 unsigned long cachedTankAverage = 0;
 
-#define KEY_TANK_MODE_LOW "low"
-#define KEY_TANK_MODE_MED "med"
-#define KEY_TANK_MODE_HIGH "high"
+#define KEY_TANK_MODE_LOW "Low"
+#define KEY_TANK_MODE_MED "Med"
+#define KEY_TANK_MODE_HIGH "High"
 
 String KEY_PROGRESSION[3] = {KEY_TANK_MODE_LOW, KEY_TANK_MODE_MED, KEY_TANK_MODE_HIGH};
 int currentTankMode = 1; // Med
@@ -65,21 +65,21 @@ void setTankAverage(unsigned long value)
     preferences.putULong(getKey("avg").c_str(), value);
 }
 
-void addToTankAverage(unsigned long tankTotal)
+void addToTankAverage(unsigned long tankTotalMillis)
 {
-    if (tankTotal < TASK_HOUR) return;
+    if (tankTotalMillis < TASK_HOUR) return;
 
     unsigned long previousAverage = getTankAverage();
     int count = preferences.getInt(getKey("cnt").c_str(), 0);
 
     if (count == 0)
     {
-        setTankAverage(tankTotal);
+        setTankAverage(tankTotalMillis);
         preferences.putInt(getKey("cnt").c_str(), 1);
     }
     else
     {
-        unsigned long newAverage = ((previousAverage * count) + tankTotal) / (count + 1);
+        unsigned long newAverage = ((previousAverage * count) + tankTotalMillis) / (count + 1);
         setTankAverage(newAverage);
         preferences.putInt(getKey("cnt").c_str(), count + 1);
 
@@ -87,7 +87,7 @@ void addToTankAverage(unsigned long tankTotal)
         Serial.println(previousAverage);
 
         Serial.print("Added value to average: ");
-        Serial.println(tankTotal);
+        Serial.println(tankTotalMillis);
     }
 
     Serial.print("New average: ");

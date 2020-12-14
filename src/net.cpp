@@ -6,14 +6,14 @@
 
 #include <tank.h>
 
-MQTTClient mqttClient;
-WiFiClient wifi;
-
 const char *ssid = "Pepperomia Pepperspot 2.4 GHz";
 const char *password = "yrdZx6SihxGhoR&m";
 const char *mqtt_server = "192.168.1.10";
 const char *mqtt_user = "mqtt";
 const char *mqtt_password = "puF9yAeHgRWhkhJa";
+
+WiFiClient wifi;
+MQTTClient mqttClient;
 
 char chipId[21];
 
@@ -27,6 +27,7 @@ String topic_total;
 String topic_average;
 String topic_debug;
 String topic_percent;
+String topic_remain;
 
 void messageReceived(String &topic, String &payload)
 {
@@ -42,7 +43,9 @@ void messageReceived(String &topic, String &payload)
         {
             fsm.trigger(ACTION_OFF);
         }
-    } else if (topic.equals(topic_debug)) {
+    }
+    else if (topic.equals(topic_debug))
+    {
         if (payload.equalsIgnoreCase("empty"))
         {
             fsm.trigger(ACTION_EMPTY);
@@ -57,6 +60,20 @@ void messageReceived(String &topic, String &payload)
     // unsubscribe as it may cause deadlocks when other things arrive while
     // sending and receiving acknowledgments. Instead, change a global variable,
     // or push to a queue and handle it in the loop after calling `client.loop()`.
+}
+
+void connectWiFi()
+{
+    Serial.print("\nConnecting to WiFi");
+    WiFi.begin(ssid, password);
+    while (WiFi.status() != WL_CONNECTED)
+    {
+        delay(100);
+        Serial.print(".");
+    }
+
+    Serial.println("\nIP address: ");
+    Serial.println(WiFi.localIP());
 }
 
 void connectMQTT()
@@ -91,30 +108,31 @@ void setupNet()
     topic_average = topicPrefix + "/average";
     topic_debug = topicPrefix + "/debug";
     topic_percent = topicPrefix + "/percent";
+    topic_remain = topicPrefix + "/remain";
 
     Serial.println("Chip ID: ");
     Serial.println(chipId);
 
-    Serial.print("\nConnecting to WiFi");
-    WiFi.begin(ssid, password);
-    while (WiFi.status() != WL_CONNECTED)
-    {
-        delay(100);
-        Serial.print(".");
-    }
-
-    Serial.println("\nIP address: ");
-    Serial.println(WiFi.localIP());
+    connectWiFi();
 
     connectMQTT();
 }
 
 void loopNet()
 {
-    mqttClient.loop();
-
+    if (WiFi.status() != WL_CONNECTED)
+    {
+        connectWiFi();
+    }
     if (!mqttClient.connected())
     {
         connectMQTT();
     }
+
+    mqttClient.loop();
+}
+
+bool isConnected()
+{
+    return WiFi.status() == WL_CONNECTED && mqttClient.connected();
 }
