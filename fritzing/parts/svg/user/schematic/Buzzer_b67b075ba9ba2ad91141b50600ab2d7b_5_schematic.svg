@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE svg>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg xmlns="http://www.w3.org/2000/svg" width="0.36in" height="0.284861in" viewBox="0 0 25.92 20.51" x="0px"  y="0px" xml:space="preserve" version="1.1" id="Layer_1" enable-background="new 0 0 25.92 20.51" xmlns:xml="http://www.w3.org/XML/1998/namespace" gorn="0">
+    <desc>
+        <referenceFile>piezo_sensor.svg</referenceFile>
+    </desc>
+    <g  id="schematic" gorn="0.0">
+        <polygon points="2.16,2.16 0.36,2.16 0.36,0.36 25.56,0.36 25.56,2.16 23.76,2.16 23.76,12.96 2.16,12.96 " fill="#FFFFFF" stroke-linecap="round" stroke-width="0.9"  stroke="#000000" stroke-linejoin="round"/>
+        <line x1="5.76" x2="9.36" fill="none" stroke-linecap="round" stroke-width="0.5"  y1="7.56" stroke="#000000" y2="7.56"/>
+        <line x1="9.36" x2="9.36" fill="none" stroke-linecap="round" stroke-width="0.5"  y1="7.56" stroke="#000000" y2="5.76"/>
+        <line x1="9.36" x2="9.36" fill="none" stroke-linecap="round" stroke-width="0.5"  y1="7.56" stroke="#000000" y2="9.36"/>
+        <line x1="11.16" x2="11.16" fill="none" stroke-linecap="round" stroke-width="0.5"  y1="3.96" stroke="#000000" y2="11.16"/>
+        <line x1="11.16" x2="14.76" fill="none" stroke-linecap="round" stroke-width="0.5"  y1="11.16" stroke="#000000" y2="11.16"/>
+        <line x1="14.76" x2="14.76" fill="none" stroke-linecap="round" stroke-width="0.5"  y1="11.16" stroke="#000000" y2="3.96"/>
+        <line x1="14.76" x2="11.16" fill="none" stroke-linecap="round" stroke-width="0.5"  y1="3.96" stroke="#000000" y2="3.96"/>
+        <line x1="16.56" x2="16.56" fill="none" stroke-linecap="round" stroke-width="0.5"  y1="5.76" stroke="#000000" y2="7.56"/>
+        <line x1="16.56" x2="20.16" fill="none" stroke-linecap="round" stroke-width="0.5"  y1="7.56" stroke="#000000" y2="7.56"/>
+        <line x1="16.56" x2="16.56" fill="none" stroke-linecap="round" stroke-width="0.5"  y1="7.56" stroke="#000000" y2="9.36"/>
+        <line x1="2.16" x2="23.76" fill="none" stroke-linecap="round" stroke-width="0.9"  y1="2.16" stroke="#000000" y2="2.16"/>
+        <line x1="16.56" x2="16.56" fill="none" stroke-linecap="round" stroke-width="0.75"  id="connector1pin" y1="20.16" gorn="0.0.12" stroke="#787878" y2="12.96"/>
+        <polygon points="16.882,20.51 16.882,19.833 16.21,19.833 16.21,20.51 " fill="none"  id="connector1terminal" gorn="0.0.13"/>
+        <g  transform="translate(5.47158,5.842)">
+            <g >
+                <g  transform="rotate(270)">
+                    <g >
+                        <g  transform="matrix(1 0 0 1 -11.4061 10.0382)">
+                            <text fill="#8C8C8C" font-size="2.5"  font-family="'DroidSans'">2</text>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <line x1="9.36" x2="9.36" fill="none" stroke-linecap="round" stroke-width="0.75"  id="connector0pin" y1="20.16" gorn="0.0.15" stroke="#787878" y2="12.96"/>
+        <polygon points="9.741,20.51 9.741,19.833 9.007,19.833 9.007,20.51 " fill="none"  id="connector0terminal" gorn="0.0.16"/>
+        <g  transform="translate(2.93158,5.842)">
+            <g >
+                <g  transform="rotate(270)">
+                    <g >
+                        <g  transform="matrix(1 0 0 1 -11.4061 5.379)">
+                            <text fill="#8C8C8C" font-size="2.5"  font-family="'DroidSans'">1</text>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

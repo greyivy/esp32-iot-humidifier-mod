@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1.09in" height="0.93970in" viewBox="0 0 78.585 67.749" x="0"  y="0" version="1.2" id="Layer_1" gorn="0">
+    <desc >
+        <referenceFile >buzzer.svg</referenceFile>
+    </desc>
+    <metadata  id="metadata52">
+        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+            <cc:Work xmlns:cc="http://creativecommons.org/ns#" rdf:about="" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                <dc:format xmlns:dc="http://purl.org/dc/elements/1.1/">image/svg+xml</dc:format>
+                <dc:type xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:resource="http://purl.org/dc/dcmitype/StillImage" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+            </cc:Work>
+        </rdf:RDF>
+    </metadata>
+    <defs  id="defs50"/>
+    <g  id="breadboard" gorn="0.3">
+        <rect width="1" height="1" fill="none" x="34.194"  y="66" id="connector0pin" gorn="0.3.0"/>
+        <rect width="1" height="1" fill="none" x="41.392"  y="66" id="connector1pin" gorn="0.3.1"/>
+        <line x1="35.687" x2="35.687" fill="none" stroke-linecap="round" stroke-width="3"  id="connector0leg" y1="67.749" gorn="0.3.2" y2="76.004" stroke="#000000"/>
+        <line x1="42.928" x2="42.928" fill="none" stroke-linecap="round" stroke-width="3"  id="connector1leg" y1="67.749" gorn="0.3.3" y2="76.004" stroke="#FF0000"/>
+        <path fill="none" d="m 35.687,46.959951 0,20.789049" stroke-width="3.57774544"  id="path8" gorn="0.3.4" stroke="#000000"/>
+        <path fill="none" d="m 42.928,47.534095 0,20.214905" stroke-width="3.52799511"  id="path10" gorn="0.3.5" stroke="#ff0000"/>
+        <circle cy="28.367001" style="fill:#0d0d0d" r="20.614054"  id="circle20" gorn="0.3.6" cx="39.292"/>
+        <circle cy="28.368" style="fill:#d7d8d9" r="9.8377609"  id="circle26" gorn="0.3.7" cx="39.292999"/>
+    </g>
+</svg>
